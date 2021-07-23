@@ -1,23 +1,32 @@
 import { ItemContext } from "../../Context/MenuContextProvider";
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
 import Item from "../../Models/Item";
 
-interface RouteParams {
-    id: string;
+import "./BasicItemStyles.css";
+import { Link } from "react-router-dom";
+
+// icons
+import toFavorite from "../../Images/to-favorite.svg";
+
+interface Props {
+    item: Item;
 }
 
-const BasicItem = () => {
-    const { items } = useContext(ItemContext)
-
-    const { id } = useParams<RouteParams>();
-
-    const foundItem: Item | undefined = items.find((item) => item.id === id);
+const BasicItem = ({item}: Props) => {
+    // const {items} = useContext(ItemContext);
 
     return(
-        <div className="ItemWrapper">
-            
-        </div>
+        <Link className="Link" to="/DetailsRoute/:id">
+            <div className="ItemWrapper">
+                <div className="Left">
+                    <h4>{item.name}</h4>
+                    <p>{item.price}</p>
+                    {console.log(item.id)}
+                </div>
+                {/* <span className="material-icons">{favorite}</span> */}
+                <img src={toFavorite} alt="favorite"/>
+            </div>
+        </Link>
     );
 
 }

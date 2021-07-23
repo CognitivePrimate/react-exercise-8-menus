@@ -2,12 +2,16 @@
 
 *{
     font-family: 'Roboto', sans-serif;
-    color: #4c5c68; /*davys grey 
+    color: #4c5c68; /*davys grey */
+    box-sizing: border-box;
+    
     
 }
 
 body {
     /* background: #4c5c68; */
     background: #C5c3c6; /*silver */
+    display: flex;
+    flex-wrap: wrap;
      
 }
