@@ -1,0 +1,18 @@
+.Wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 2px 2px 10px .05px rgba(70, 73, 76, .5);
+}
+
+
+.Header {
+    text-decoration: none;
+    color: #46494C;
+    margin: 0 8px;
+}
+
+.SearchBox {
+    display: flex;
+}
