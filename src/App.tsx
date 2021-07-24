@@ -8,28 +8,25 @@ import DetailsRoute from './Components/DetailsRoute/DetailsRoute';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <ItemContextProvider>
-          <Header />
-          <Route path="/">
-            <MenuRoute />
-          </Route>
-
+    <Router>
+        <Header />
           <Switch>
-            <Route path="/DetailsRoute/:id">
-              <DetailsRoute />
+            {/* home */}
+          <Route path="/" exact>
+            <ItemContextProvider>
+              <MenuRoute />
+            </ItemContextProvider>  
+          </Route>
+          
+            {/* details */}
+            <Route path="/DetailsRoute/:id" exact>
+              <ItemContextProvider>
+                <DetailsRoute />
+              </ItemContextProvider>
             </Route>
-
-            
           </Switch>
-
-
-
-        </ItemContextProvider>
-      </Router>
-        
-    </div>
+      </Router>  
+      
   );
 }
 
