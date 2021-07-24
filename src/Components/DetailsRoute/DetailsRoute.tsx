@@ -13,6 +13,7 @@ const DetailsRoute = () => {
     const { id } = useParams<RouteParams>();
 
     const foundItem: Item | undefined = items.find((item) => item.id === id);
+    console.log(foundItem);
 
     return(
         <div className="ItemWrapper">

@@ -17,7 +17,7 @@ function App() {
           </Route>
 
           <Switch>
-            <Route path="/DetailsRoute/:id" exact>
+            <Route path="/DetailsRoute/:id">
               <DetailsRoute />
             </Route>
 
