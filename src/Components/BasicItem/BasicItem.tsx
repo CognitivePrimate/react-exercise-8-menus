@@ -20,6 +20,7 @@ const BasicItem = ({item}: Props) => {
                     <h4>{item.name}</h4>
                     <p>{item.price}</p>
                 </div>
+                {/* fix home link */}
                 <img src={toFavorite} alt="favorite"/>
             </div>
         </Link>

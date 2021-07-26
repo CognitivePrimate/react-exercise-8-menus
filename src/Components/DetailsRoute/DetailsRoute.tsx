@@ -1,6 +1,6 @@
 import { ItemContext } from "../../Context/MenuContextProvider";
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Item from "../../Models/Item";
 
 // images
@@ -31,7 +31,10 @@ const DetailsRoute = () => {
                 <h4>${foundItem?.price}</h4>
                 <p>Vegetarian: {foundItem?.vegetarian ? "Yes" : "No"}</p>
             </div>
-            <img className="HomeIcon" src={Home} alt="home"/>
+            <Link to="/" className="HomeIconWrapper">
+                <img className="HomeIcon" src={Home} alt="home"/>
+            </Link>
+            
             
         </div>
     );
